@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 
 // ✅ Correct usage of Poppins font
 const font = Poppins({
@@ -18,9 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body 
         className={`${font.className} antialiased`}>
+          <ResponsiveNav/>
         {children}
       </body>
     </html>
